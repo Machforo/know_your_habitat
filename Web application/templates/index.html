@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildingAI</title>
+    <link rel="icon" href="/static/logo.png" type="image/x-icon">
+</head>
+
+<style>
+    body{
+            
+            background-image: url("{{ url_for('static', filename='HomePage_bg1.jpg') }}");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+</style>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"> 
+<div style="margin:0;padding:0;"> 
+    <div class="logo">
+        <img style="position:fixed;width:120px;float:left;padding-left:0;padding-top:0px;" src="/static/logo.png" alt="Logo"> 
+        </div> 
+        <nav style="height:95px;width:100%;background:rgb(255, 255, 255,0.67);overflow:auto;">
+            <ul style="float:right; list-style:none; margin-top:30px;padding-right:10px;">
+            <li style="display:inline-block;"><a style=" color:rgb(0, 0, 0);text-decoration:none;padding: 10px 20px;font-size:20px;" href="#">Home</a></li>
+            <Li style="display:inline-block;"><a style="color:rgb(0, 0, 0);text-decoration:none;padding:10px 20px;font-size:20px;" href="#">About</a></li>
+            <Li style="display:inline-block;"><a style="color:rgb(0, 0, 0);text-decoration:none;padding:10px 20px;font-size:20px;" href="#">Services</a></li>
+            <Li style="display:inline-block;"><a style="color:rgb(0, 0, 0);text-decoration:none;padding:10px 20px;font-size:20px;" href="#">Contacts</a></li> </ul>
+            </nav>
+        
+            </div>
+
+<h1 style="background:rgb(248, 248, 248,0.5);position: absolute;margin: 10% 5%;text-align: center;font-size: 60px;" >Upload your image here</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer style="position:absolute;bottom:0;left:0;right:0;background:rgb(0, 0, 0,0.5);height:auto;width:100vw;font-family:'Open Sans';padding-top:0px;color:#fff;">
+    <div >
+        <h3 style="display:flex;justify-content:center;flex-direction:column;text-align:center;font-size :1.8rem;font-weight:400;text-transform:capitalize;line-height:3rem;">Building AI</h3>
+        <p style="display:flex;justify-content:center;flex-direction:column;text-align:center;max-width:auto ;margin:10px auto;line-height:28px;font-size:20px; " ><b> GROUP NUMBER 10</b></p>
+        <p style="display:flex;justify-content:center;flex-direction:column;text-align:center;max-width:auto ;word-spacing:2px;margin:10px auto;line-height:28px;font-size:18px; " > Rajeev Sharma email- B21064@students.iitmandi.ac.in || Atharv Kumar email- B21038@students.iitmandi.ac.in  </p>
+        <p style="display:flex;justify-content:center;flex-direction:column;text-align:center;max-width:auto ;word-spacing:2px;margin:10px auto;line-height:28px;font-size:18px; " > Krishna Singh email- B21054@students.iitmandi.ac.in || Nihal Singh email- B21059@students.iitmandi.ac.in</p>
+        <p style="display:flex;justify-content:center;flex-direction:column;text-align:center;max-width:auto ;word-spacing:2px;margin:10px auto;line-height:28px;font-size:18px; " > Mohit Singh email- B21056@students.iitmandi.ac.in || Gyanesh ranjan chauhan email- B21047@students.iitmandi.ac.in  </p>
+        
+
+        
+    </div>
+    <div>
+        <p style="width:100vm;padding:20px 0;text-align:center;font-size: 14px;word-spacing: 2px;text-transform: capitalize; font-size:18px;">copyright &copy;2022 BuildingAI. designed by <span style="width:100vm;padding:20px 0;font-size:14px;text-align:center;opacity:1;font-weight:200;font-size:14px;">Rajeev Sharma</span></p>
+    </div>
+</footer>
+<body >
+    
+    <h1> {{output}}</h1>
+    
+    <form method='POST' enctype='multipart/form-data' style="margin-left: 5%;margin-top: 10%;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        {{form.submit()}}
+    </form>
+</body>
+
+
+</html>
